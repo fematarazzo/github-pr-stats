@@ -33,6 +33,15 @@ const GET_USER_PRS_QUERY = `
             stargazerCount
           }
           url
+          timelineItems(itemTypes: [CLOSED_EVENT], last: 1) {
+            nodes {
+              ... on ClosedEvent {
+                closer {
+                  __typename
+                }
+              }
+            }
+          }
         }
       }
     }

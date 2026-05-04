@@ -15,6 +15,11 @@ export interface GitHubPR {
     stargazerCount: number
   }
   url: string
+  timelineItems: {
+    nodes: Array<{
+      closer: { __typename: string } | null
+    }>
+  }
 }
 
 export interface ProcessedPR {
