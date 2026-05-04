@@ -5,22 +5,36 @@ type StatusFilter = 'all' | 'merged' | 'open' | 'closed' | 'draft'
 
 export class DataProcessor {
   static processGitHubPRs(rawPRs: GitHubPR[]): ProcessedPR[] {
-    return rawPRs.map(pr => ({
-      repo: `${pr.repository.owner.login}/${pr.repository.name}`,
-      stars: pr.repository.stargazerCount,
-      pr_title: pr.title,
-      pr_number: pr.number,
-      status: this.mapPRStatus(pr),
-      created_date: this.formatDate(pr.createdAt),
-      merged_date: pr.mergedAt ? this.formatDate(pr.mergedAt) : null,
-      url: pr.url
-    }))
+    return rawPRs.map(pr => {
+      const status = this.mapPRStatus(pr)
+      const upstreamMerged = status === 'merged' && pr.state === 'CLOSED'
+      return {
+        repo: `${pr.repository.owner.login}/${pr.repository.name}`,
+        stars: pr.repository.stargazerCount,
+        pr_title: pr.title,
+        pr_number: pr.number,
+        status,
+        created_date: this.formatDate(pr.createdAt),
+        merged_date: pr.mergedAt
+          ? this.formatDate(pr.mergedAt)
+          : upstreamMerged && pr.closedAt
+            ? this.formatDate(pr.closedAt)
+            : null,
+        url: pr.url
+      }
+    })
+  }
+
+  private static isClosedByCommit(pr: GitHubPR): boolean {
+    const closer = pr.timelineItems?.nodes?.[0]?.closer
+    return !!closer && closer.__typename === 'Commit'
   }
 
   private static mapPRStatus(pr: GitHubPR): 'merged' | 'open' | 'closed' | 'draft' {
     if (pr.isDraft) return 'draft'
     if (pr.state === 'MERGED') return 'merged'
     if (pr.state === 'OPEN') return 'open'
+    if (pr.state === 'CLOSED' && this.isClosedByCommit(pr)) return 'merged'
     return 'closed'
   }
 
