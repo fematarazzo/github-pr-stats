@@ -31,6 +31,7 @@ Transform your scattered GitHub PR contributions into beautiful, shareable stati
 
 ### 📈 Repository Stats Mode - Impact Overview  
 ![Repo Stats Demo](https://github-pr-stats-1dsc.vercel.app/api/github-pr-stats?username=torvalds&mode=repo-aggregate&limit=5&theme=dark)
+
 *Using Linux creator Linus Torvalds' public PR data for technical demonstration*
 
 ### ☀️ Light Theme Available
