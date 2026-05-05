@@ -27,19 +27,19 @@ Transform your scattered GitHub PR contributions into beautiful, shareable stati
 > **Note**: The following demos use public GitHub data accessible via the GitHub API for demonstration purposes only.
 
 ### 📊 PR List Mode - Your Contribution Timeline
-![PR List Demo](https://github-pr-stats-five.vercel.app/api/github-pr-stats?username=f14xuanlv&limit=6&theme=dark)
+![PR List Demo](https://github-pr-stats-1dsc.vercel.app/api/github-pr-stats?username=fematarazzo&limit=6&theme=dark)
 
 ### 📈 Repository Stats Mode - Impact Overview  
-![Repo Stats Demo](https://github-pr-stats-five.vercel.app/api/github-pr-stats?username=torvalds&mode=repo-aggregate&limit=5&theme=dark)
+![Repo Stats Demo](https://github-pr-stats-1dsc.vercel.app/api/github-pr-stats?username=torvalds&mode=repo-aggregate&limit=5&theme=dark)
 *Using Linux creator Linus Torvalds' public PR data for technical demonstration*
 
 ### ☀️ Light Theme Available
-![Light Theme Demo](https://github-pr-stats-five.vercel.app/api/github-pr-stats?username=f14xuanlv&theme=light&limit=6)
+![Light Theme Demo](https://github-pr-stats-1dsc.vercel.app/api/github-pr-stats?username=fematarazzo&theme=light&limit=6)
 
 ## 🚀 Get Started in 2 Minutes
 
 ### 1. Deploy Instantly
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/f14xuanlv/github-pr-stats)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/fematarazzo/github-pr-stats)
 
 For detailed setup instructions, see **[📚 Documentation](#📚-documentation)** → **[🚀 Deployment Guide](docs/deployment.md)**
 
@@ -105,15 +105,15 @@ Choose from multiple themes and customize every aspect:
 
 Pull Requests or Issues are welcome.
 
-[![Contributors](https://contrib.rocks/image?repo=f14XuanLv/github-pr-stats)](https://github.com/f14XuanLv/github-pr-stats/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=fematarazzo/github-pr-stats)](https://github.com/fematarazzo/github-pr-stats/graphs/contributors)
 
 ## ⭐ Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=f14XuanLv/github-pr-stats&type=Date)](https://star-history.com/#f14XuanLv/github-pr-stats&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=fematarazzo/github-pr-stats&type=Date)](https://star-history.com/#fematarazzo/github-pr-stats&Date)
 
 ## 📄 License
 
-[MIT License](https://github.com/f14XuanLv/github-pr-stats/blob/main/LICENSE) - Completely free, contributions welcome
+[MIT License](https://github.com/fematarazzo/github-pr-stats/blob/main/LICENSE) - Completely free, contributions welcome
 
 ---
 
